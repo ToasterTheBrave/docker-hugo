@@ -1,0 +1,85 @@
+# hostname (and path) to the root eg. http://spf13.com/
+baseurl = "{{ .Env.HUGO_BASEURL }}"
+
+# Site title
+title = "{{ .Env.HUGO_TITLE }}"
+
+# Copyright
+copyright = "{{ .Env.HUGO_COPYRIGHT }}"
+
+# Language
+languageCode = "{{ .Env.HUGO_LANGUAGECODE }}"
+
+# Metadata format
+# "yaml", "toml", "json"
+metaDataFormat = "{{ .Env.HUGO_METADATAFORMAT }}"
+
+# Theme to use (located in /themes/THEMENAME/)
+theme = "{{ .Env.HUGO_THEME }}"
+
+# Pagination
+paginate = {{ .Env.HUGO_PAGINATE }}
+paginatePath = "{{ .Env.HUGO_PAGINATEPATH }}"
+
+# Enable Disqus integration
+disqusShortname = "{{ .Env.HUGO_DISQUSSHORTNAME }}"
+
+[permalinks]
+    post = "{{ .Env.HUGO_POST }}"
+    code = "{{ .Env.HUGO_CODE }}"
+
+[taxonomies]
+    tag = "{{ .Env.HUGO_TAG }}"
+    topic = "{{ .Env.HUGO_TOPIC }}"
+
+[author]
+    name = "{{ .Env.HUGO_NAME }}"
+    email = "{{ .Env.HUGO_EMAIL }}"
+
+#
+# All parameters below here are optional and can be mixed and matched.
+#
+[params]
+    # You can use markdown here.
+    brand = "{{ .Env.HUGO_BRAND }}"
+    topline = "{{ .Env.HUGO_TOPLINE }}"
+    footline = "{{ .Env.HUGO_FOOTLINE }}"
+
+    # Sidebar position
+    # false, true, "left", "right"
+    sidebar = "{{ .Env.HUGO_SIDEBAR }}"
+
+    # Text for the top menu link, which goes the root URL for the site.
+    # Default (if omitted) is "Home".
+    home = "{{ .Env.HUGO_HOME }}"
+
+    # Select a syntax highight.
+    # Check the static/css/highlight directory for options.
+    highlight = "{{ .Env.HUGO_HIGHLIGHT }}"
+
+    # Google Analytics.
+    googleAnalytics = "{{ .Env.HUGO_GOOGLEANALYTICS }}"
+
+    # Sidebar social links.
+    github = "{{ .Env.HUGO_GITHUB }}" # Your Github profile ID
+    bitbucket = "{{ .Env.HUGO_BITBUCKET }}" # Your Bitbucket profile ID
+    linkedin = "{{ .Env.HUGO_LINKEDIN }}" # Your LinkedIn profile ID (from public URL)
+    googleplus = ""{{ .Env.HUGO_GOOGLEPLUS }}# Your Google+ profile ID
+    facebook = ""{{ .Env.HUGO_FACEBOOK }}# Your Facebook profile ID
+    twitter = ""{{ .Env.HUGO_TWITTER }}# Your Twitter profile ID
+    youtube = ""{{ .Env.HUGO_YOUTUBE }}# Your Youtube channel ID
+    flattr = ""{{ .Env.HUGO_FLATTR }}# populate with your flattr uid
+
+    theme = "{{ .Env.HUGO_SECONDARY_THEME }}"
+    tagline = "{{ .Env.HUGO_TAGLINE }}"
+
+
+[blackfriday]
+    angledQuotes = {{ .Env.HUGO_ANGLEDQUOTES }}
+    fractions = {{ .Env.HUGO_FRACTIONS }}
+    hrefTargetBlank = {{ .Env.HUGO_HREFTARGETBLANK }}
+    latexDashes = {{ .Env.HUGO_LATEXDASHES }}
+    plainIdAnchors = {{ .Env.HUGO_PLAINIDANCHORS }}
+    extensions = {{ .Env.HUGO_EXTENSIONS }}
+    extensionmask = {{ .Env.HUGO_EXTENSIONMASK }}
+
