@@ -17,10 +17,5 @@ COPY templates /app/templates
 ADD entrypoint.sh /sbin/entrypoint.sh
 ENTRYPOINT ["/sbin/entrypoint.sh"]
 
-ONBUILD COPY site/ /app/site
-
-# Set working directory
-WORKDIR /app/site
-
 # Run command
 CMD [ "hugo", "server", "--bind=0.0.0.0" ]
