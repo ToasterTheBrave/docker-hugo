@@ -17,7 +17,7 @@ COPY templates /app/templates
 ADD entrypoint.sh /sbin/entrypoint.sh
 ENTRYPOINT ["/sbin/entrypoint.sh"]
 
-ONBUILD ADD site/ /app/site
+ONBUILD COPY site/ /app/site
 
 # Set working directory
 WORKDIR /app/site
